@@ -11,6 +11,7 @@
 		7503B8CC25BF8125002775DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7503B8CB25BF8125002775DD /* ContentView.swift */; };
 		7503B8CE25BF8125002775DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7503B8CD25BF8125002775DD /* Assets.xcassets */; };
 		7503B8D125BF8125002775DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7503B8D025BF8125002775DD /* Preview Assets.xcassets */; };
+		759446BC25C06881008EA04C /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759446BB25C06881008EA04C /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		7503B8CD25BF8125002775DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7503B8D025BF8125002775DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7503B8D225BF8125002775DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		759446BB25C06881008EA04C /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,10 @@
 		7503B8C825BF8125002775DD /* TwitterSwiftUITut */ = {
 			isa = PBXGroup;
 			children = (
+				759446B825C06815008EA04C /* Model */,
+				759446B925C0681E008EA04C /* View */,
+				759446BA25C06845008EA04C /* ViewModels */,
 				7503B8C925BF8125002775DD /* TwitterSwiftUITutApp.swift */,
-				7503B8CB25BF8125002775DD /* ContentView.swift */,
 				7503B8CD25BF8125002775DD /* Assets.xcassets */,
 				7503B8D225BF8125002775DD /* Info.plist */,
 				7503B8CF25BF8125002775DD /* Preview Content */,
@@ -67,6 +71,29 @@
 				7503B8D025BF8125002775DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		759446B825C06815008EA04C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		759446B925C0681E008EA04C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7503B8CB25BF8125002775DD /* ContentView.swift */,
+				759446BB25C06881008EA04C /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		759446BA25C06845008EA04C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7503B8CC25BF8125002775DD /* ContentView.swift in Sources */,
+				759446BC25C06881008EA04C /* FeedView.swift in Sources */,
 				7503B8CA25BF8125002775DD /* TwitterSwiftUITutApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
