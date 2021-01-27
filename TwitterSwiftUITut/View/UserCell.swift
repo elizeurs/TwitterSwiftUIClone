@@ -24,6 +24,7 @@ struct UserCell: View {
           Text("Eddie Brock")
             .font(.system(size: 14))
         }
+        .foregroundColor(.black)
       }
     }
 }
