@@ -26,6 +26,7 @@ struct ConversationCell: View {
             .font(.system(size: 15))
             .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
         }
+        .foregroundColor(.black)
         .padding(.trailing)
       }
       
