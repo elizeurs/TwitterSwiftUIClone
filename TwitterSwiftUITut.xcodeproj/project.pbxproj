@@ -40,6 +40,7 @@
 		75ED5FCB25C4BC3500B7FA3D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 75ED5FCA25C4BC3500B7FA3D /* FirebaseStorage */; };
 		75ED5FCD25C4BC3500B7FA3D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 75ED5FCC25C4BC3500B7FA3D /* FirebaseAuth */; };
 		75ED5FCF25C4BC3500B7FA3D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 75ED5FCE25C4BC3500B7FA3D /* FirebaseFirestore */; };
+		75ED5FD225C4C79600B7FA3D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ED5FD125C4C79600B7FA3D /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		759446D425C0BEE5008EA04C /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		75ED5FC125C485E700B7FA3D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		75ED5FC425C4B8C600B7FA3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		75ED5FD125C4C79600B7FA3D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		759446BA25C06845008EA04C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				75ED5FD125C4C79600B7FA3D /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				75124F6225C1C338003E9560 /* ChatBubble.swift in Sources */,
 				759446C025C08137008EA04C /* TweetCell.swift in Sources */,
 				75124F6B25C1F139003E9560 /* NewMessageView.swift in Sources */,
+				75ED5FD225C4C79600B7FA3D /* AuthViewModel.swift in Sources */,
 				75124F6525C1DB62003E9560 /* Message.swift in Sources */,
 				75124F6F25C20001003E9560 /* UserProfileView.swift in Sources */,
 				759446C625C0A417008EA04C /* SearchBar.swift in Sources */,
