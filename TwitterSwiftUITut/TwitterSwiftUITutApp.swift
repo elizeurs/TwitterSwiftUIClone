@@ -17,8 +17,7 @@ struct TwitterSwiftUITutApp: App {
   
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-          LoginView()
+          ContentView().environmentObject(AuthViewModel())
         }
     }
 }
