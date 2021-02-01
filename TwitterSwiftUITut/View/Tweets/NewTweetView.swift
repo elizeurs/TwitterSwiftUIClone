@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct NewTweetView: View {
   @Binding var isPresented: Bool
@@ -15,12 +16,15 @@ struct NewTweetView: View {
     NavigationView {
       VStack {
         HStack(alignment: .top) {
-          Image("batman")
-            .resizable()
-            .scaledToFill()
-            .clipped()
-            .frame(width: 64, height: 64)
-            .cornerRadius(32)
+//          Image("batman")
+          if let user = AuthViewModel.shared.user {
+            KFImage(URL(string: user.profileImageUrl))
+              .resizable()
+              .scaledToFill()
+              .clipped()
+              .frame(width: 64, height: 64)
+              .cornerRadius(32)
+          }
           
 //          Text("What's happeining?")
 //            .foregroundColor(.gray)

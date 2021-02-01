@@ -14,6 +14,8 @@ class AuthViewModel: ObservableObject {
   @Published var error: Error?
   @Published var user: User?
   
+  static let shared = AuthViewModel()
+  
   init() {
     userSession = Auth.auth().currentUser
     fetchUser()
@@ -29,6 +31,7 @@ class AuthViewModel: ObservableObject {
       print("DEBUG: Successfully logged in")
       
       self.userSession = result?.user
+      self.fetchUser()
     }
   }
   
@@ -49,7 +52,7 @@ class AuthViewModel: ObservableObject {
         return
       }
       
-      print("DEBUG: Successfully uploaded user photo..")
+//      print("DEBUG: Successfully uploaded user photo..")
       
       storageRef.downloadURL { url, _ in
         guard let profileImageUrl = url?.absoluteString else { return }
@@ -71,6 +74,7 @@ class AuthViewModel: ObservableObject {
           Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
             print("DEBUG: Successfully uploaded user data..")
             self.userSession = user
+            self.fetchUser()
           }
         }
       }
