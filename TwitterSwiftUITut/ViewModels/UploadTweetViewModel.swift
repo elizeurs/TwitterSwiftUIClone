@@ -9,6 +9,11 @@ import SwiftUI
 import Firebase
 
 class UploadTweetViewModel: ObservableObject {
+  @Binding var isPresented: Bool
+  
+  init(isPresented: Binding<Bool>) {
+    self._isPresented = isPresented
+  }
   
   func uploadTweet(caption: String)  {
 //    print("DEBUG: Upload tweet here..")
@@ -25,6 +30,7 @@ class UploadTweetViewModel: ObservableObject {
     
     docRef.setData(data) { _ in
       print("DEBUG: Successfully uploaded tweet..")
+      self.isPresented = false
     }
   }
 }
