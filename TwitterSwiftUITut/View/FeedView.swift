@@ -14,9 +14,11 @@ struct FeedView: View {
   var body: some View {
     ZStack(alignment: .bottomTrailing) {
       ScrollView {
-        VStack {
+        LazyVStack {
           ForEach(viewModel.tweets) { tweet in
-            TweetCell(tweet: tweet)
+            NavigationLink(destination: TweetDetailView(tweet: tweet)) {
+              TweetCell(tweet: tweet)
+            }
           }
         }.padding()
       }

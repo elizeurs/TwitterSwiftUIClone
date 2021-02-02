@@ -27,6 +27,7 @@ struct TweetCell: View {
 //              Text("Bruce Wayne")
               Text(tweet.fullname)
                 .font(.system(size: 14, weight: .semibold))
+                .foregroundColor(.black)
               
 //              Text("@batman •")
                 Text("@\(tweet.username)")
@@ -38,44 +39,14 @@ struct TweetCell: View {
             
 //            Text("It's not who i am underneath, but what i do that defines me")
             Text(tweet.caption)
+              .foregroundColor(.black)
+
           }
         }
         .padding(.bottom)
         .padding(.trailing)
         
-        HStack {
-          Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            Image(systemName: "bubble.left")
-              .font(.system(size: 16))
-              .frame(width: 32, height: 32)
-          })
-          
-          Spacer()
-          
-          Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            Image(systemName: "arrow.2.squarepath")
-              .font(.system(size: 16))
-              .frame(width: 32, height: 32)
-          })
-          
-          Spacer()
-          
-          Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            Image(systemName: "heart")
-              .font(.system(size: 16))
-              .frame(width: 32, height: 32)
-          })
-          
-          Spacer()
-            
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-              Image(systemName: "bookmark")
-                .font(.system(size: 16))
-                .frame(width: 32, height: 32)
-          })
-        }
-        .foregroundColor(.gray)
-        .padding(.horizontal)
+        TweetActionsView()
         
         Divider()
       }
