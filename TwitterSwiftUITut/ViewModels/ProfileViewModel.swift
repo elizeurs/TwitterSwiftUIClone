@@ -11,10 +11,14 @@ import Firebase
 class ProfileViewModel: ObservableObject {
   let user: User
   @Published var isFollowed = false
+  @Published var userTweets =  [Tweet]()
+  @Published var likedTweets = [Tweet]()
   
   init(user: User) {
     self.user = user
     checkIfUserIsFollowed()
+    fetchUserTweets()
+    fetchLikedTweets()
   }
   
   func follow() {
@@ -49,6 +53,31 @@ class ProfileViewModel: ObservableObject {
       guard let isFollowed = snapshot?.exists else { return }
       self.isFollowed = isFollowed
     }
-    
+  }
+  
+  func fetchUserTweets() {
+    COLLECTION_TWEETS.whereField("uid", isEqualTo: user.id).getDocuments { Snapshot, _ in
+      guard let documents = Snapshot?.documents else { return }
+      documents.forEach { document in
+//        print("DEBUG: Doc data is \(document.data())")
+      }
+    }
+  }
+  
+  func fetchLikedTweets() {
+    COLLECTION_USERS.document(user.id).collection("user-likes").getDocuments { snapshot, _ in
+      guard let documents = snapshot?.documents else { return }
+      let tweetIDs = documents.map ({ $0.documentID })
+      
+      tweetIDs.forEach { id in
+        COLLECTION_TWEETS.document(id).getDocument { snapshot, _ in
+          guard let data = snapshot?.data() else { return }
+          let tweet = Tweet(dictionary: data)
+          
+          print("DEBUG: Liked tweet is \(tweet)")
+        }
+      }
+    }
   }
 }
+  
