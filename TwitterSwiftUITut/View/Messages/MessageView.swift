@@ -17,7 +17,7 @@ struct MessageView: View {
         Text(message.messageText)
           .padding()
           .background(Color.blue)
-          .clipShape(ChatBubble(isFromCurrentUser: false))
+          .clipShape(ChatBubble(isFromCurrentUser: true))
           .foregroundColor(.white)
           .padding(.horizontal)
       } else {
