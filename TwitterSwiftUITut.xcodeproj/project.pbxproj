@@ -21,6 +21,7 @@
 		75124F7325C2013F003E9560 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75124F7225C2013F003E9560 /* ProfileHeaderView.swift */; };
 		75124F7625C2015E003E9560 /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75124F7525C2015E003E9560 /* ProfileActionButtonView.swift */; };
 		75124F7925C20199003E9560 /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75124F7825C20199003E9560 /* FilterButtonView.swift */; };
+		753031B225CB078B00226284 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753031B125CB078B00226284 /* LazyView.swift */; };
 		7530940225C609C0004569E1 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7530940125C609C0004569E1 /* KingfisherSwiftUI */; };
 		7530940525C60A42004569E1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530940425C60A42004569E1 /* SearchViewModel.swift */; };
 		7530940925C60B2F004569E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530940825C60B2F004569E1 /* Constants.swift */; };
@@ -71,6 +72,7 @@
 		75124F7225C2013F003E9560 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		75124F7525C2015E003E9560 /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
 		75124F7825C20199003E9560 /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
+		753031B125CB078B00226284 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		7530940425C60A42004569E1 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		7530940825C60B2F004569E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		754528FD25C99C100023E056 /* TweetActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionViewModel.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				75559FD525C3595F006737D7 /* CustomTextField.swift */,
 				75559FD825C365BC006737D7 /* CustomSecureField.swift */,
 				75ED5FC125C485E700B7FA3D /* ImagePicker.swift */,
+				753031B125CB078B00226284 /* LazyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753031B225CB078B00226284 /* LazyView.swift in Sources */,
 				759446C325C0A331008EA04C /* SearchView.swift in Sources */,
 				75559FCA25C346DC006737D7 /* TextArea.swift in Sources */,
 				75559FD325C35701006737D7 /* RegistrationView.swift in Sources */,

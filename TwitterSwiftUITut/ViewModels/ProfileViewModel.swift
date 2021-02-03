@@ -61,6 +61,9 @@ class ProfileViewModel: ObservableObject {
 //      documents.forEach { document in
 //        print("DEBUG: Doc data is \(document.data())")
       self.userTweets = documents.map({ Tweet(dictionary: $0.data()) })
+      
+      print("DEBUG: User tweets \(self.userTweets)")
+
     }
   }
   
@@ -81,9 +84,16 @@ class ProfileViewModel: ObservableObject {
           self.likedTweets = tweets
   
 //          print("DEBUG: Liked tweet is \(tweet)")
-          
+                    
         }
       }
+    }
+  }
+  
+  func tweets(forFilter filter: TweetFilterOptions) -> [Tweet] {
+    switch filter {
+    case .tweets: return userTweets
+    case .likes: return likedTweets
     }
   }
 }

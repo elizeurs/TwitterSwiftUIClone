@@ -21,7 +21,7 @@ struct SearchView: View {
           HStack { Spacer() }
           
           NavigationLink(
-            destination: UserProfileView(user: user),
+            destination: LazyView(UserProfileView(user: user)),
             label: {
               UserCell(user: user)
             })
