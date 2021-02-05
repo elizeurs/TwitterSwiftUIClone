@@ -26,7 +26,7 @@ struct ConversationsView: View {
         VStack {
           ForEach(viewModel.recentMessages) { message in
             NavigationLink(
-              destination: ChatView(user: message.user),
+              destination: LazyView(ChatView(user: message.user)),
               label: {
                 ConversationCell(message: message)
               })
