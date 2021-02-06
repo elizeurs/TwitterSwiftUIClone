@@ -30,10 +30,10 @@ struct TweetCell: View {
                 .foregroundColor(.black)
               
 //              Text("@batman •")
-                Text("@\(tweet.username)")
+                Text("@\(tweet.username) •")
                 .foregroundColor(.gray)
               
-              Text("2w")
+              Text(tweet.timestampString)
                 .foregroundColor(.gray)
             }
             

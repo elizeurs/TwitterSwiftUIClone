@@ -12,7 +12,7 @@ struct ConversationCell: View {
   let message: Message
   
   var body: some View {
-    VStack {
+    VStack(alignment: .leading) {
       HStack(spacing: 12) {
 //        Image("venom-10")
         KFImage(URL(string: message.user.profileImageUrl))
